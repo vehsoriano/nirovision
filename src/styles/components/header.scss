@@ -1,0 +1,22 @@
+.header {
+    .logo {
+        width: 200px;
+        height: auto;
+        object-fit: contain;
+        max-width: 100%;
+    }
+
+    .nav-icon {
+        margin: 0 5px;
+
+        font-size: 25px;
+        color: #fff;
+        cursor: pointer;
+
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: #9b9b9b;
+        }
+    }
+}
