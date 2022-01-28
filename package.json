@@ -4,6 +4,8 @@
   "homepage": "https://vehsoriano.github.io/nirovision",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-react": "^7.9.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -16,8 +18,9 @@
     "react-lazy-load-image-component": "^1.5.1",
     "react-responsive-masonry": "^2.1.4",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "sass": "^1.49.0",
+    "simple-react-lightbox": "^3.6.9-0",
     "unsplash-js": "^7.0.15",
     "web-vitals": "^2.1.4"
   },
@@ -28,7 +31,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
