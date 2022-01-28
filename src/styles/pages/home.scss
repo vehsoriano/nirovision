@@ -1,8 +1,14 @@
-.header {
-    .logo {
-        width: 200px;
-        height: auto;
-        object-fit: contain;
-        max-width: 100%;
-    }
+.home {
+    padding: 15px;
+}
+
+.holder-description {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.holder-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
