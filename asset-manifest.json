@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nirovision/static/css/main.0ebecaa1.css",
+    "main.js": "/nirovision/static/js/main.dd34691a.js",
+    "static/js/787.5337991d.chunk.js": "/nirovision/static/js/787.5337991d.chunk.js",
+    "index.html": "/nirovision/index.html",
+    "main.0ebecaa1.css.map": "/nirovision/static/css/main.0ebecaa1.css.map",
+    "main.dd34691a.js.map": "/nirovision/static/js/main.dd34691a.js.map",
+    "787.5337991d.chunk.js.map": "/nirovision/static/js/787.5337991d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ebecaa1.css",
+    "static/js/main.dd34691a.js"
+  ]
+}
