@@ -18,7 +18,7 @@
     "react-lazy-load-image-component": "^1.5.1",
     "react-responsive-masonry": "^2.1.4",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^4.0.0",
     "sass": "^1.49.0",
     "simple-react-lightbox": "^3.6.9-0",
     "unsplash-js": "^7.0.15",

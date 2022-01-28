@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
+/*
+    Lightbox for photo rendering 
+*/
+import { SRLWrapper } from "simple-react-lightbox";
+
+/* 
+    Lazy Load Image Component
+    Package for Lazy loading image
+*/
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-
+/* 
+    React Icon Library
+*/
 import { FaHeart } from "react-icons/fa";
 
 function Photos(props) {
@@ -32,42 +42,48 @@ function Photos(props) {
         getRandomPhotos()
     },[]);
 
-
-    function lightboxCustom(i) {
-        props.triggerModal(i)
-        // console.log(i)
+    const options = {
+        thumbnails: {
+          showThumbnailsButton: false,
+        }
     }
 
-  return (
-    <ResponsiveMasonry
-        columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
-    >
-        <Masonry className="photos" gutter='10px'>
-            {
-                photos.map((item, i) => {
-                    return(
-                        <div className="holder-img" key={i} onClick={() => lightboxCustom(item)}>
-                            <LazyLoadImage 
-                                effect="blur"
-                                className="img"  
-                                src={item.urls.regular} 
-                                alt={item.alt_description}
-                                width="100%"
-                                height="auto"/>
-                            {/* <p>{item.alt_description}</p> */}
+    // function lightboxCustom(i) {
+    //     props.triggerModal(i)
+    //     // console.log(i)
+    // }
 
-                            <div className="overlay">
-                                <p className="overlay-name">{item.user.name}</p>
-                                <p className="overlay-heart"> <FaHeart /> {item.user.total_likes}</p>
-                            </div>
-                        </div>
-                    )
-                })
-            }
-        </Masonry>
-    </ResponsiveMasonry>
-    
-  );
+  return (
+        <div className="photos">
+            <div className='srl-wrapper'>
+                <SRLWrapper options={options}>
+                    {
+                        photos.map((item, i) => {
+                            return(
+                                <div className="holder-img" key={i}>
+                                    {/* <div className="holder-img" key={i} onClick={() => lightboxCustom(item)}> */}
+                                    <LazyLoadImage 
+                                        effect="blur"
+                                        className="img"  
+                                        src={item.urls.small} 
+                                        alt={item.alt_description}
+                                        width="100%"
+                                        height="auto"
+                                        />
+                                    {/* <p>{item.alt_description}</p> */}
+
+                                    <div className="overlay">
+                                        <p className="overlay-name">{item.user.name}</p>
+                                        <p className="overlay-heart"> <FaHeart /> {item.user.total_likes}</p>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </SRLWrapper>
+            </div>
+        </div>
+    );
 }
 
 export default Photos;
