@@ -1,7 +1,7 @@
 {
   "name": "nirovision",
   "version": "0.1.0",
-  "homepage": "https://vehsoriano.github.io/nirovision",
+  "homepage": "https://vehsoriano.github.io/nirovision/",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.9.0",
