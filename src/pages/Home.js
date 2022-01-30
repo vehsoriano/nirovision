@@ -6,39 +6,47 @@ import Photos from '../components/Photos';
 
 
 import {
-  Modal,
+  Container,
   Col,
-  Button
+  Row
 } from 'react-bootstrap'
 
 
 const Home = () => {
   
-  const [show, setShow] = useState(false);
-  const [modalData, setModalData] = useState({})
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  // const [show, setShow] = useState(false);
+  // const [modalData, setModalData] = useState({})
+  // const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const handleClose = () => setShow(false);
+  // const handleClose = () => setShow(false);
 
-  function handleOpenMenu(i) {
-    show ? setShow(false) : setShow(true)
-    if (i) {
-      setModalData(i)
-      setIsModalOpen(true)
-    }
-    console.log(i)
-  }
+  // function handleOpenMenu(i) {
+  //   show ? setShow(false) : setShow(true)
+  //   if (i) {
+  //     setModalData(i)
+  //     setIsModalOpen(true)
+  //   }
+  //   console.log(i)
+  // }
 
   return (
     <>
       <Header />
         <main className="home">
 
-        <Photos triggerModal={(i) => handleOpenMenu(i)}/>
+        <Container>
+          <Row>
+            <Col>
+              <Photos />
+            </Col>
+          </Row>
+        </Container>
+        {/* <Photos triggerModal={(i) => handleOpenMenu(i)}/> */}
+        
 
         </main>
       <Footer />
-      {
+      {/* {
         isModalOpen ?
         <Modal show={show} onHide={handleClose}>
           <Modal.Body>
@@ -51,7 +59,7 @@ const Home = () => {
             </div>
           </Modal.Body>
         </Modal> : ''
-      }
+      } */}
       
     </>
   );

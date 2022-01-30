@@ -11,6 +11,9 @@
         width: 100%;
         height: auto;
 
+        // grid-row: 1 / -1;
+        // grid-column: 1;
+
         filter: grayscale(100%);
 
         transition: all .3s ease-in-out;

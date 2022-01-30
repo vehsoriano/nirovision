@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 
 /*
-    Lightbox for photo rendering 
+    Package for API Rendering calls
 */
-import { SRLWrapper } from "simple-react-lightbox";
+import axios from 'axios'
 
 /* 
     Lazy Load Image Component
@@ -13,22 +12,32 @@ import { SRLWrapper } from "simple-react-lightbox";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+/*
+    Lightbox for photo rendering 
+*/
+import { SRLWrapper } from "simple-react-lightbox";
+
+
 /* 
     React Icon Library
 */
 import { FaHeart } from "react-icons/fa";
 
-function Photos(props) {
+const Photos = (props) => {
     console.log(props)
 
 
     // populate photo data into array state
     const [photos, SetPhotos] = useState([])
 
+    useEffect(() => {
+        getRandomPhotos()
+    },[]);
+
     const getRandomPhotos = async () => {
         try {
             const res = await axios.get(`https://api.unsplash.com/photos/?client_id=zm6yP5utQrDdjin90JVGm7qie_4wPSZvbmUSpJnWsa0`)
-            const data = await res.data;
+            const data = res.data;
             console.log(res)
             if (res.status) {
                 SetPhotos(data)
@@ -38,9 +47,7 @@ function Photos(props) {
         }
     }
 
-    useEffect(() => {
-        getRandomPhotos()
-    },[]);
+    
 
     const options = {
         thumbnails: {
@@ -48,10 +55,7 @@ function Photos(props) {
         }
     }
 
-    // function lightboxCustom(i) {
-    //     props.triggerModal(i)
-    //     // console.log(i)
-    // }
+    console.log(photos !== 0)
 
   return (
         <div className="photos">
@@ -61,16 +65,12 @@ function Photos(props) {
                         photos.map((item, i) => {
                             return(
                                 <div className="holder-img" key={i}>
-                                    {/* <div className="holder-img" key={i} onClick={() => lightboxCustom(item)}> */}
                                     <LazyLoadImage 
-                                        effect="blur"
-                                        className="img"  
                                         src={item.urls.small} 
                                         alt={item.alt_description}
-                                        width="100%"
-                                        height="auto"
+                                        effect="blur"
+                                        className="img"  
                                         />
-                                    {/* <p>{item.alt_description}</p> */}
 
                                     <div className="overlay">
                                         <p className="overlay-name">{item.user.name}</p>

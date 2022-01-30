@@ -1,4 +1,3 @@
-import { render } from "react-dom";
 import {
   BrowserRouter,
   Routes,
@@ -12,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" index element={<Home />} />
+      <Route path="/nirovision" index element={<Home />} />
       <Route path="/about" element={<About />} />
     </Routes>
   </BrowserRouter>

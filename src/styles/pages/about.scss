@@ -1,8 +1,34 @@
-.header {
+.about {
     .logo {
         width: 200px;
         height: auto;
         object-fit: contain;
         max-width: 100%;
+    }
+
+
+    .holder-profile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .holder-image {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .holder-image img {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        top: 0;
+        max-width: 450px;
+    }
+
+    .holder-roadmap {
+        width: 75%;
     }
 }
