@@ -15,7 +15,11 @@ const click = () => {
     console.log('click')
 }
 
-const Header = () => {    
+const Header = (props) => {    
+
+    const { refreshPage, iconHide } = props
+
+    console.log(iconHide)
 
   return (
     <header className="header">
@@ -30,14 +34,17 @@ const Header = () => {
                     <Nav.Link href="/nirovision">Home</Nav.Link>
                     <Nav.Link href="/about">About</Nav.Link>
                 </Nav>
-                <Nav className="nav-icon-holder">
+                {
+                    iconHide == 'hidden' ? '' : 
+                    <Nav className="nav-icon-holder">
                     <Nav.Item className="nav-icon">
-                        <HiRefresh onClick={click}/>
+                        <HiRefresh onClick={refreshPage}/>
                     </Nav.Item>
                     <Nav.Item className="nav-icon">
                         <AiFillSetting />
                     </Nav.Item>
                 </Nav>
+                }
             </Navbar.Collapse>
         </Container>
         </Navbar>

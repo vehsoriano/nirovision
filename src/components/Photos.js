@@ -23,6 +23,15 @@ import { SRLWrapper } from "simple-react-lightbox";
 */
 import { FaHeart } from "react-icons/fa";
 
+
+/*  
+    Package for React bootstrap component
+*/
+import {
+    Container,
+    Row
+  } from 'react-bootstrap'
+
 const Photos = (props) => {
     console.log(props)
 
@@ -47,8 +56,6 @@ const Photos = (props) => {
         }
     }
 
-    
-
     const options = {
         thumbnails: {
           showThumbnailsButton: false,
@@ -58,31 +65,36 @@ const Photos = (props) => {
     console.log(photos !== 0)
 
   return (
-        <div className="photos">
-            <div className='srl-wrapper'>
-                <SRLWrapper options={options}>
-                    {
-                        photos.map((item, i) => {
-                            return(
-                                <div className="holder-img" key={i}>
-                                    <LazyLoadImage 
-                                        src={item.urls.small} 
-                                        alt={item.alt_description}
-                                        effect="blur"
-                                        className="img"  
-                                        />
 
-                                    <div className="overlay">
-                                        <p className="overlay-name">{item.user.name}</p>
-                                        <p className="overlay-heart"> <FaHeart /> {item.user.total_likes}</p>
+    <Container>
+          <Row>
+            <div className="photos">
+                <div className='srl-wrapper'>
+                    <SRLWrapper options={options}>
+                        {
+                            photos.map((item, i) => {
+                                return(
+                                    <div className="holder-img" key={i}>
+                                        <LazyLoadImage 
+                                            src={item.urls.small} 
+                                            alt={item.alt_description}
+                                            effect="blur"
+                                            className="img"  
+                                            />
+
+                                        <div className="overlay">
+                                            <p className="overlay-name">{item.user.name}</p>
+                                            <p className="overlay-heart"> <FaHeart /> {item.user.total_likes}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            )
-                        })
-                    }
-                </SRLWrapper>
+                                )
+                            })
+                        }
+                    </SRLWrapper>
+                </div>
             </div>
-        </div>
+          </Row>
+    </Container>
     );
 }
 

@@ -1,4 +1,7 @@
 .about {
+
+    background: #e3e3e3;
+
     .logo {
         width: 200px;
         height: auto;
@@ -7,28 +10,365 @@
     }
 
 
-    .holder-profile {
+    .wrapper-profile {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    .holder-image {
+    .holder-profile {
         width: 25%;
         display: flex;
-        justify-content: center;
-        align-items: baseline;
+        
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
-    .holder-image img {
+    .profile-img {
         width: 100%;
         height: auto;
-        position: sticky;
-        top: 0;
         max-width: 450px;
+    }
+
+    .holder-image-skills {
+        position: sticky;
+        top: 15px;
+    }
+
+    .holder-greetings {
+        margin: 25px 0;
+    }
+
+    .greetings {
+        margin-bottom: 6px;
+
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .text {
+        margin-bottom: 10px;
+
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .holder-skills {
+        position: relative;
+        margin: 15px 0 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        
+        list-style: none;
     }
 
     .holder-roadmap {
         width: 75%;
+    }
+
+    .vertical-timeline-element-title {
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+    .vertical-timeline-element-subtitle {
+        margin-top: 0;
+        font-size: 14px;
+    }
+
+    .vertical-timeline-element-desc {
+        font-size: 14px;
+    }
+
+    .vertical-timeline-element-date {
+        font-style: italic;
+    }
+
+    .skill-icon {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+
+
+        background-color: #fff;
+        // box-shadow: 4px 6px 14px -6px rgb(0 0 0 / 63%);
+        border-radius: 100%;
+        font-size: 20px;
+
+        &.html {
+            top: 26px;
+            left: 5px;
+        }
+
+        &.react {
+            top: 10px;
+            right: 5px;
+        }
+
+        &.css {
+            bottom: 10px;
+            left: 5px;
+        }
+
+        &.javascript {
+            bottom: 10px;
+            right: 5px;
+        }
+
+        &.bootstrap {
+            top: 10px;
+            left: 80px;
+        }
+
+        &.gatsby {
+            top: 130px;
+            right: 75px;
+        }
+
+        &.node {
+            top: 76px;
+            left: 113px;
+        }
+
+        &.mongodb {
+            top: 166px;
+            left: 93px;
+        }
+
+        &.wordpress {
+            bottom: 94px;
+            right: 5px;
+        }
+
+        &.sass {
+            bottom: 10px;
+            left: 79px;
+        }
+
+        &.php {
+            top: 84px;
+            right: 5px;
+        }
+
+        &.jquery {
+            top: 108px;
+            left: 22px;
+        }
+
+        &.material {
+            top: 20px;
+            right: 78px;
+        }
+
+        &.github {
+            bottom: 69px;
+            left: 12px;
+        }
+
+        &.firebase {
+            bottom: 34px;
+            left: 156px;
+        }
+    }
+    
+
+    .default {
+        height: 40px;
+        width: 40px;
+
+        transform: translatey(0px);
+	    animation: floatDef 4s ease-in-out infinite;
+    }
+
+    .medium {
+        height: 50px;
+        width: 50px;
+
+        transform: translatey(0px);
+	    animation: floatMed 7s ease-in-out infinite;
+    }
+
+    .large {
+        height: 60px;
+        width: 60px;
+
+        transform: translatey(0px);
+	    animation: floatLarge 8s ease-in-out infinite;
+    }
+
+    @keyframes floatLarge {
+        0% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translatey(0px);
+        }
+        50% {
+            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+            transform: translatey(-20px);
+        }
+        100% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translatey(0px);
+        }
+    }
+
+    @keyframes floatMed {
+        0% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translatey(0px);
+        }
+        50% {
+            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+            transform: translatey(-15px);
+        }
+        100% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translatey(0px);
+        }
+    }
+
+    @keyframes floatDef {
+        0% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translatey(0px);
+        }
+        50% {
+            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+            transform: translatey(-10px);
+        }
+        100% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translatey(0px);
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 992px) {
+    .about {
+        .large {
+            height: 45px;
+            width: 45px;
+        }
+
+        .default {
+            height: 35px;
+            width: 35px;
+        }
+
+        .medium {
+            height: 40px;
+            width: 40px;
+        }
+
+        .skill-icon {
+            &.bootstrap {
+                top: 10px;
+                left: 60px;
+            }
+
+            &.jquery {
+                top: 83px;
+                left: 21px;
+            }
+
+            &.node {
+                top: 70px;
+                left: 76px;
+            }
+
+            &.mongodb {
+                top: 145px;
+                left: 70px;
+            }
+
+            &.php {
+                top: 65px;
+                right: 42px;
+            }
+
+            &.firebase {
+                bottom: 13px;
+                left: 130px;
+            }
+
+            &.gatsby {
+                top: 130px;
+                right: 64px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about {
+        .holder-profile {
+            width: 100%;
+        }
+
+        .holder-roadmap {
+            width: 100%;
+        }
+
+        .holder-greetings {
+            text-align: center;
+        }
+
+        .holder-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .holder-image-skills {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .holder-skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 15px;
+        }
+
+        .skill-icon {
+            position: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about {
+        .vertical-timeline-element-title {
+            font-size: 15px;
+        }
+
+        .vertical-timeline-element-subtitle {
+            font-size: 13px;
+        }
+
+        .vertical-timeline-element-desc {
+            margin-top: 0;
+            font-size: 10px;
+        }
+
+        .vertical-timeline-element-content,
+        .vertical-timeline-element-date {
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .greetings {
+            font-size: 15px;
+        }
+
+        .text {
+            margin-bottom: 2px;
+            font-size: 18px;
+        }
     }
 }
