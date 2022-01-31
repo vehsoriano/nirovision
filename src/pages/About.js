@@ -102,8 +102,8 @@ const About = () => {
             <Row>
                 <div className="holder-greetings">
                   <p className="greetings"> &#60;/&#62; Hi! &#60;/&#62; </p>
-                  <p className="name text">I'm Victor!</p>
-                  <p className="name text">Aspiring Web Developer</p>
+                  <p className="name text">I'm &#123; Victor! &#125; </p>
+                  <p className="name text">Mid-level Front-end Developer</p>
                 </div>
             </Row>
           </Container>

@@ -65,7 +65,6 @@ const Photos = (props) => {
     console.log(photos !== 0)
 
   return (
-
     <Container>
           <Row>
             <div className="photos">
@@ -93,7 +92,7 @@ const Photos = (props) => {
                     </SRLWrapper>
                 </div>
             </div>
-          </Row>
+        </Row>
     </Container>
     );
 }

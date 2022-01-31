@@ -44,10 +44,12 @@
 
 
     .overlay {
+        z-index: 1;
         
         opacity: 0;
         transition: all .3s ease;            
-        z-index: 1;
+
+        text-shadow: 2px 2px 4px #000000;
         
         &::before{
             position: absolute;
