@@ -10,11 +10,11 @@ import About from '../src/pages/About';
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/nirovision" index element={<Home />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
-  </BrowserRouter>
+      <Routes>
+        <Route path="/" index element={<Home />} />
+        <Route path="about" index element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
