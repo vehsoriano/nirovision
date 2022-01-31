@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 
+/*  
+    Package for React bootstrap component
+*/
 import {
     Navbar,
     Nav,
     Container
 } from 'react-bootstrap'
 
+/* 
+    React Icon Library
+*/
 import { HiRefresh } from 'react-icons/hi';
 import { AiFillSetting } from "react-icons/ai";
 
@@ -32,8 +38,8 @@ const Header = (props) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <Link to="/nirovision">Home</Link>
-                    <Link to="/about">About</Link>
+                    <Link className="nav-link" to="/nirovision">Home</Link>
+                    <Link className="nav-link" to="/about">About</Link>
                 </Nav>
                 {
                     iconHide == 'hidden' ? '' : 

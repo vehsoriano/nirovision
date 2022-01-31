@@ -50,7 +50,7 @@ import {
 } from 'react-bootstrap'
 
 /*
-  Static data for Timeline
+  Static data for Timeline section
 */
 const history = [
   {
@@ -90,7 +90,6 @@ const history = [
     desc: 'AngularJS, Gulp.js, Integrated Development environment, Scrum'
   },
 ]
-
 
 const About = () => {    
   return (

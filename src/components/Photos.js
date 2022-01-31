@@ -36,13 +36,15 @@ const Photos = (props) => {
     console.log(props)
 
 
-    // populate photo data into array state
+    // populate photo data into array state hooks
     const [photos, SetPhotos] = useState([])
 
+    // Fetch data from api using useEffect equivalent to ComponentDidMount
     useEffect(() => {
         getRandomPhotos()
     },[]);
 
+    // a function to asnyc GET method from unsplash API 
     const getRandomPhotos = async () => {
         try {
             const res = await axios.get(`https://api.unsplash.com/photos/?client_id=zm6yP5utQrDdjin90JVGm7qie_4wPSZvbmUSpJnWsa0`)
@@ -56,6 +58,7 @@ const Photos = (props) => {
         }
     }
 
+    // React Lazy Load image component optional parameters
     const options = {
         thumbnails: {
           showThumbnailsButton: false,
