@@ -32,7 +32,7 @@ const Header = (props) => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="/nirovision">Home</Nav.Link>
-                    <Nav.Link href="/about">About</Nav.Link>
+                    <Nav.Link href="/nirovision/about">About</Nav.Link>
                 </Nav>
                 {
                     iconHide == 'hidden' ? '' : 
@@ -41,7 +41,7 @@ const Header = (props) => {
                         <HiRefresh onClick={refreshPage}/>
                     </Nav.Item>
                     <Nav.Item className="nav-icon">
-                        <AiFillSetting />
+                        <AiFillSetting onClick={click}/>
                     </Nav.Item>
                 </Nav>
                 }

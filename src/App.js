@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/nirovision" element={<Home />}>
-          <Route path="/nirovision/about" element={<About />}>
+          <Route path="about" element={<About />}>
           </Route>
         </Route>
       </Routes>
