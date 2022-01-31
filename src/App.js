@@ -11,10 +11,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/nirovision" element={<Home />}>
-          <Route path="about" element={<About />}>
-          </Route>
+        <Route path="/nirovision" index element={<Home />}>
         </Route>
+        <Route path="/about" index element={<About />}>
+          </Route>
       </Routes>
     </BrowserRouter>
   );

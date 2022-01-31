@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 import {
     Navbar,
@@ -31,8 +32,8 @@ const Header = (props) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="/nirovision">Home</Nav.Link>
-                    <Nav.Link href="/nirovision/about">About</Nav.Link>
+                    <Link to="/nirovision">Home</Link>
+                    <Link to="/about">About</Link>
                 </Nav>
                 {
                     iconHide == 'hidden' ? '' : 
