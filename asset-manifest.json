@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/nirovision/static/css/main.fe642336.chunk.css",
-    "main.js": "/nirovision/static/js/main.3e6a3b82.chunk.js",
-    "main.js.map": "/nirovision/static/js/main.3e6a3b82.chunk.js.map",
+    "main.css": "/nirovision/static/css/main.9228107f.chunk.css",
+    "main.js": "/nirovision/static/js/main.926b9745.chunk.js",
+    "main.js.map": "/nirovision/static/js/main.926b9745.chunk.js.map",
     "runtime-main.js": "/nirovision/static/js/runtime-main.3091ee2d.js",
     "runtime-main.js.map": "/nirovision/static/js/runtime-main.3091ee2d.js.map",
     "static/css/2.c12b2a28.chunk.css": "/nirovision/static/css/2.c12b2a28.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.bb924187.chunk.js.map": "/nirovision/static/js/3.bb924187.chunk.js.map",
     "index.html": "/nirovision/index.html",
     "static/css/2.c12b2a28.chunk.css.map": "/nirovision/static/css/2.c12b2a28.chunk.css.map",
-    "static/css/main.fe642336.chunk.css.map": "/nirovision/static/css/main.fe642336.chunk.css.map",
+    "static/css/main.9228107f.chunk.css.map": "/nirovision/static/css/main.9228107f.chunk.css.map",
     "static/js/2.c9adf339.chunk.js.LICENSE.txt": "/nirovision/static/js/2.c9adf339.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3091ee2d.js",
     "static/css/2.c12b2a28.chunk.css",
     "static/js/2.c9adf339.chunk.js",
-    "static/css/main.fe642336.chunk.css",
-    "static/js/main.3e6a3b82.chunk.js"
+    "static/css/main.9228107f.chunk.css",
+    "static/js/main.926b9745.chunk.js"
   ]
 }
