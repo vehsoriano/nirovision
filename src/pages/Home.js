@@ -24,7 +24,7 @@ const Home = () => {
     */
     function changeLayout() {
       // console.log('click')
-      column == 3 ? setColumn(4) : setColumn(3)
+      column === 3 ? setColumn(4) : setColumn(3)
     }
     
   return (

@@ -41,7 +41,7 @@ const Header = (props) => {
                     <Link className="nav-link" to="/about">About</Link>
                 </Nav>
                 {
-                    iconHide == 'hidden' ? '' : 
+                    iconHide === 'hidden' ? '' : 
                     <Nav className="nav-icon-holder">
                     <Nav.Item className="nav-icon">
                         <HiRefresh onClick={refreshPage}/>
