@@ -14,3 +14,12 @@
         max-width: 100%;
     }
 }
+
+
+@media screen and (max-width: 767px) {
+    .footer {
+        .logo {
+            width: 150px;
+        }
+    }
+}

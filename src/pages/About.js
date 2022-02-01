@@ -6,8 +6,18 @@ import React, {} from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
+/*
+  Import React Components
+*/
 import Header from '../components/Header'
 import Footer from '../components/Footer';
+
+/* 
+    Lazy Load Image Component
+    Package for Lazy loading image
+*/
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 /* 
   React Icon Library
@@ -81,13 +91,94 @@ const history = [
     desc: 'PSD to HTML, Responsive Web Design, MERN Stack, React Native development'
   },
   {
-    date: 'Sep 2018 - Feb 2020',
+    date: 'Apr 2017 - Jun 2017',
     title: 'Front-end Developer Trainee',
     sub: 'Toro.io',
     layout: '1-column-left',
     icon: <BsCodeSlash />,
     iconBackground: 'rgb(206, 56, 70)',
     desc: 'AngularJS, Gulp.js, Integrated Development environment, Scrum'
+  },
+]
+
+/*
+  Static skill data for animating bubbles 
+*/
+const skills = [
+  {
+    stack: 'hmtl',
+    bubbleSize: 'medium',
+    icon: <IoLogoHtml5 />
+  },
+  {
+    stack: 'react',
+    bubbleSize: 'large',
+    icon: <FaReact />
+  },
+  {
+    stack: 'css',
+    bubbleSize: 'default',
+    icon: <IoLogoCss3 />
+  },
+  {
+    stack: 'javascript',
+    bubbleSize: 'medium',
+    icon: <IoLogoJavascript />
+  },
+  {
+    stack: 'bootstrap',
+    bubbleSize: 'default',
+    icon: <BsFillBootstrapFill />
+  },
+  {
+    stack: 'gatsby',
+    bubbleSize: 'default',
+    icon: <GrGatsbyjs />
+  },
+  {
+    stack: 'node',
+    bubbleSize: 'medium',
+    icon: <IoLogoNodejs />
+  },
+  {
+    stack: 'mongodb',
+    bubbleSize: 'medium',
+    icon: <SiMongodb />
+  },
+  {
+    stack: 'wordpress',
+    bubbleSize: 'medium',
+    icon: <FaWordpress />
+  },
+  {
+    stack: 'sass',
+    bubbleSize: 'default',
+    icon: <IoLogoSass />
+  },
+  {
+    stack: 'php',
+    bubbleSize: 'default',
+    icon: <SiPhp />
+  },
+  {
+    stack: 'jquery',
+    bubbleSize: 'medium',
+    icon: <SiJquery />
+  },
+  {
+    stack: 'material',
+    bubbleSize: 'default',
+    icon: <SiMaterialui />
+  },
+  {
+    stack: 'github',
+    bubbleSize: 'default',
+    icon: <IoLogoGithub />
+  },
+  {
+    stack: 'firebase',
+    bubbleSize: 'medium',
+    icon: <SiFirebase />
   },
 ]
 
@@ -114,24 +205,16 @@ const About = () => {
                 <div className="holder-profile">
                   <div className="holder-image-skills">
                     <div className="holder-image">
-                      <img className="profile-img" src="https://yt3.ggpht.com/ytc/AKedOLRAWAY_J5IEhHVsiqZOekGyDIIk6nCkzqr2pT4wlg=s900-c-k-c0x00ffffff-no-rj" alt="Verrell Soriano Profile" />
+                      <LazyLoadImage className="profile-img" src="https://yt3.ggpht.com/ytc/AKedOLRAWAY_J5IEhHVsiqZOekGyDIIk6nCkzqr2pT4wlg=s900-c-k-c0x00ffffff-no-rj" alt="Verrell Soriano Profile" />
                     </div>
                     <ul className="holder-skills">
-                      <li className="skill-icon medium html "><IoLogoHtml5 /></li>
-                      <li className="skill-icon large react "><FaReact /></li>
-                      <li className="skill-icon default css "><IoLogoCss3 /></li>
-                      <li className="skill-icon medium javascript "><IoLogoJavascript /></li>
-                      <li className="skill-icon default bootstrap "><BsFillBootstrapFill /></li>
-                      <li className="skill-icon default gatsby "><GrGatsbyjs /></li>
-                      <li className="skill-icon medium node "><IoLogoNodejs /></li>
-                      <li className="skill-icon default mongodb "><SiMongodb /></li>
-                      <li className="skill-icon medium wordpress "><FaWordpress /></li>
-                      <li className="skill-icon default sass "><IoLogoSass /></li>
-                      <li className="skill-icon default php "><SiPhp /></li>
-                      <li className="skill-icon medium jquery "><SiJquery /></li>
-                      <li className="skill-icon default material "><SiMaterialui /></li>
-                      <li className="skill-icon default github "><IoLogoGithub /></li>
-                      <li className="skill-icon medium firebase "><SiFirebase /></li>
+                      {
+                        skills.map((item, i) => {
+                          return (
+                            <li className={"skill-icon " + item.stack + " " + item.bubbleSize }>{item.icon}</li>
+                          )
+                        })
+                      }
                     </ul>
                   </div>
                 </div>
@@ -157,7 +240,6 @@ const About = () => {
                   </VerticalTimeline>
                 </div>
               </div>
-
             </Row>
           </Container>
         </section>
