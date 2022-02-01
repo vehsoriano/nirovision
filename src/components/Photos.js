@@ -33,7 +33,14 @@ import {
   } from 'react-bootstrap'
 
 const Photos = (props) => {
-    console.log(props)
+    /*
+        Development console photos props
+        console.log(props)  
+    */
+
+    const { 
+        column //Props render from header [Trigger render]
+    } = props
 
 
     // populate photo data into array state hooks
@@ -49,7 +56,10 @@ const Photos = (props) => {
         try {
             const res = await axios.get(`https://api.unsplash.com/photos/?client_id=zm6yP5utQrDdjin90JVGm7qie_4wPSZvbmUSpJnWsa0`)
             const data = res.data;
-            console.log(res)
+            /*
+                Development console unsplash data
+                console.log(res) 
+            */
             if (res.status) {
                 SetPhotos(data)
             }
@@ -65,13 +75,16 @@ const Photos = (props) => {
         }
     }
 
-    console.log(photos !== 0)
+    /*
+        Development console photos state
+        console.log(photos !== 0)
+    */
 
   return (
     <Container>
           <Row>
             <div className="photos">
-                <div className='srl-wrapper'>
+                <div className={`srl-wrapper count-${column}`}>
                     <SRLWrapper options={options}>
                         {
                             photos.map((item, i) => {
@@ -86,7 +99,10 @@ const Photos = (props) => {
 
                                         <div className="overlay">
                                             <p className="overlay-name">{item.user.name}</p>
-                                            <p className="overlay-heart"> <FaHeart /> {item.user.total_likes}</p>
+                                            <p className="overlay-heart"> 
+                                                <FaHeart /> 
+                                                {item.user.total_likes}
+                                            </p>
                                         </div>
                                     </div>
                                 )

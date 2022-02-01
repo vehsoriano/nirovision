@@ -18,15 +18,14 @@ import { AiFillSetting } from "react-icons/ai";
 
 import Logo from '../images/logo.png'
 
-const click = () => {
-    console.log('click')
-}
-
 const Header = (props) => {    
 
-    const { refreshPage, iconHide } = props
-
-    console.log(iconHide)
+    // Header props for different page rendering
+    const { 
+        refreshPage, // Triggers refresh function in Home page
+        iconHide, // Conditional rendering in About page 
+        changeLayout //Layout Change in Photos, triggers a function in Home page
+    } = props  
 
   return (
     <header className="header">
@@ -48,7 +47,7 @@ const Header = (props) => {
                         <HiRefresh onClick={refreshPage}/>
                     </Nav.Item>
                     <Nav.Item className="nav-icon">
-                        <AiFillSetting onClick={click}/>
+                        <AiFillSetting onClick={changeLayout}/>
                     </Nav.Item>
                 </Nav>
                 }

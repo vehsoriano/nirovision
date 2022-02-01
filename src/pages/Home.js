@@ -13,17 +13,29 @@ function refreshPage() {
 }
 
 const Home = () => {
+  
+    /*
+      [Header Trigger] state render to Photos Component 
+    */
+    const [column, setColumn] = useState(3)
 
+    /* 
+      [Header] function to change outline of column in Photos Component 
+    */
+    function changeLayout() {
+      // console.log('click')
+      column == 3 ? setColumn(4) : setColumn(3)
+    }
+    
   return (
     <>
-      <Header refreshPage={refreshPage}/>
-        <main className="home">
+      <Header refreshPage={refreshPage} changeLayout={changeLayout}/>
+      <main className="home">
 
-        <Photos />        
+      <Photos column={column}/>        
 
-        </main>
+      </main>
       <Footer />
-      
     </>
   );
 }

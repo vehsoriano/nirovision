@@ -1,10 +1,29 @@
 .photos {
     
     .srl-wrapper {
+
         div {
-            column-count: 3;
             column-gap: 10px;
         }
+
+        &.count-3 {
+            div {
+                column-count: 3;
+                column-gap: 10px;
+            }
+        }
+
+        &.count-4 {
+            div {
+                column-count: 4;
+                column-gap: 10px;
+            }
+        }
+
+        // div {
+        //     column-count: 3;
+        //     column-gap: 10px;
+        // }
     }
 
     .img {
